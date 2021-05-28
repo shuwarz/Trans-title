@@ -13,6 +13,8 @@
 		D828AEAC263C13180086FF88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D828AEAA263C13180086FF88 /* Main.storyboard */; };
 		D828AEAE263C13190086FF88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D828AEAD263C13190086FF88 /* Assets.xcassets */; };
 		D828AEB1263C13190086FF88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D828AEAF263C13190086FF88 /* LaunchScreen.storyboard */; };
+		D8B6919C2660FD2800F8244D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6919B2660FD2800F8244D /* GameViewController.swift */; };
+		D8B6919F2660FD6300F8244D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6919E2660FD6300F8244D /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D828AEAD263C13190086FF88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D828AEB0263C13190086FF88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D828AEB2263C13190086FF88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8B6919B2660FD2800F8244D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		D8B6919E2660FD6300F8244D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				D828AEA6263C13180086FF88 /* SceneDelegate.swift */,
 				D828AEA8263C13180086FF88 /* ViewController.swift */,
 				D828AEAA263C13180086FF88 /* Main.storyboard */,
+				D8B6919B2660FD2800F8244D /* GameViewController.swift */,
+				D8B6919E2660FD6300F8244D /* ResultViewController.swift */,
 				D828AEAD263C13190086FF88 /* Assets.xcassets */,
 				D828AEAF263C13190086FF88 /* LaunchScreen.storyboard */,
 				D828AEB2263C13190086FF88 /* Info.plist */,
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B6919F2660FD6300F8244D /* ResultViewController.swift in Sources */,
+				D8B6919C2660FD2800F8244D /* GameViewController.swift in Sources */,
 				D828AEA9263C13180086FF88 /* ViewController.swift in Sources */,
 				D828AEA5263C13180086FF88 /* AppDelegate.swift in Sources */,
 				D828AEA7263C13180086FF88 /* SceneDelegate.swift in Sources */,
