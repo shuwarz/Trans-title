@@ -11,7 +11,7 @@ import UIKit
 class ResultViewController: UIViewController {
     
     //正解数
-    var correctAnswer = Int = 0
+    var correctAnswer: Int = 0
     
     //結果を表示するラベル
     @IBOutlet var resultLabel: UILabel!
@@ -20,6 +20,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        resultLabel.text = String(correctAnswer)
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,7 +29,7 @@ class ResultViewController: UIViewController {
     }
 
     @IBAction func back() {
-        
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

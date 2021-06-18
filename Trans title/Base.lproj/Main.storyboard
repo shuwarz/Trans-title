@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rPW-kE-GJh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -32,6 +32,9 @@
                                 <rect key="frame" x="138" y="689" width="139" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="9xe-Uk-Uyx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="クイズ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9l8-HG-TSI">
                                 <rect key="frame" x="173" y="204" width="69" height="51"/>
@@ -54,44 +57,68 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="Trans_title" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSJ-Ku-EXz">
+                                <rect key="frame" x="91" y="376" width="240" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="２"/>
+                                <connections>
+                                    <action selector="choiceAnswerWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kr6-17-9rh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzV-BT-Bes">
+                                <rect key="frame" x="91" y="465" width="240" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="３"/>
+                                <connections>
+                                    <action selector="choiceAnswerWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I1x-3c-a4o"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BCm-zh-k5s">
+                                <rect key="frame" x="87" y="647" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="~問題文〜" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="46E-YT-0m6">
-                                <rect key="frame" x="87" y="174" width="240" height="128"/>
+                                <rect key="frame" x="87" y="155" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A10-Nh-0gU">
-                                <rect key="frame" x="87" y="348" width="240" height="81"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNK-fD-Fqu">
+                                <rect key="frame" x="87" y="554" width="249" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="４"/>
+                                <connections>
+                                    <action selector="choiceAnswerWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nyF-PE-YuD"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSJ-Ku-EXz">
-                                <rect key="frame" x="87" y="423" width="240" height="81"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A10-Nh-0gU">
+                                <rect key="frame" x="91" y="287" width="240" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="choiceAnswerWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fee-bP-3eb"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzV-BT-Bes">
-                                <rect key="frame" x="87" y="512" width="240" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BCm-zh-k5s">
-                                <rect key="frame" x="87" y="647" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="choiceButton1" destination="A10-Nh-0gU" id="hvP-Mc-lmG"/>
-                        <outlet property="choiceButton2" destination="lSJ-Ku-EXz" id="UA6-Wb-aLc"/>
-                        <outlet property="choiceButton3" destination="vzV-BT-Bes" id="Uf5-f7-tol"/>
+                        <outlet property="choiceButton1" destination="A10-Nh-0gU" id="JJr-fL-fGd"/>
+                        <outlet property="choiceButton2" destination="lSJ-Ku-EXz" id="S3j-Au-9X9"/>
+                        <outlet property="choiceButton3" destination="vzV-BT-Bes" id="bdc-Vn-3fq"/>
+                        <outlet property="choiceButton4" destination="qNK-fD-Fqu" id="gOK-QQ-lFp"/>
+                        <outlet property="quizTextView" destination="46E-YT-0m6" id="7bE-pf-3MC"/>
+                        <segue destination="MUh-pf-3r5" kind="presentation" identifier="toResultView" id="tjd-Dg-f37"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -103,7 +130,7 @@
             <objects>
                 <viewController id="MUh-pf-3r5" customClass="ResultViewController" customModule="Trans_title" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M7h-ej-aRK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TWB-vk-kfa">
