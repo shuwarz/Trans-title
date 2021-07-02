@@ -13,6 +13,9 @@ class GameViewController: UIViewController {
     //問題文を格納する配列
     var quizArray = [Any]()
     
+    //選択したジャンルを保存する変数
+    var genre: String = ""
+    
     //正解数を数えるための変数
     var correctAnser : Int = 0
     
