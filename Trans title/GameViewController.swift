@@ -31,14 +31,29 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //quizeArrayに問題文、4つの選択肢、答えの番号が入った配列を追加
-        quizArray = QuizList.japaneseToEnglish
+        //もしgenreに入っている文字列がjapaneseToEngilishAnimeだったら
+            //quizeArrayにQuizList.japaneseToEnglishAnimeの値を入れる
+        if genre == "japaneseToEnglishAnime" {
+            quizArray = QuizList.japaneseToEnglishAnime
+            
+        }
+        //もしgenreに入っている文字列がjapaneseToEngilishMovieだったら
+            //quizeArrayにQuizList.japaneseToEnglishMovieの値を入れる
+        if genre == "japaneseToEnglishMovie" {
+            quizArray = QuizList.japaneseToEnglishMovie
+            
+        }
         
         //問題文をシャッフル
         quizArray.shuffle()
         // Do any additional setup after loading the view.
         
         choiceQuiz()
+        //ボタンの角を丸くする
+        choiceButton1.layer.cornerRadius = 10
+        choiceButton2.layer.cornerRadius = 10
+        choiceButton3.layer.cornerRadius = 10
+        choiceButton4.layer.cornerRadius = 10
     }
     
     @IBAction func choiceAnswer(sender: UIButton) {

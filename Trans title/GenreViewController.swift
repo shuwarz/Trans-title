@@ -26,16 +26,16 @@ class GenreViewController: UIViewController {
     }
     */
 
-    @IBAction func japaneseToEnglish() {
-        performSegue(withIdentifier: "toGameViewController", sender: "japaneseToEnglish")
+    @IBAction func japaneseToEnglishAnime() {
+        performSegue(withIdentifier: "toGameViewController", sender: "japaneseToEnglishAnime")
     }
     
-    @IBAction func EnglishTojapanese() {
-        performSegue(withIdentifier: "toGameViewContoroller", sender: "EnglishTojapanese")
+    @IBAction func japaneseToEnglishMovie() {
+        performSegue(withIdentifier: "toGameViewController", sender: "japaneseToEnglishMovie")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toGameViewContoroller" {
+        if segue.identifier == "toGameViewController" {
             let gameViewContoroller = segue.destination as! GameViewController
             gameViewContoroller.genre = sender as! String
         }
