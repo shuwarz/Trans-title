@@ -10,6 +10,8 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
+    //スタート画面に戻る
+    @IBOutlet var backToredultButton: UIButton!
     //正解数
     var correctAnswer: Int = 0
     
@@ -21,6 +23,9 @@ class ResultViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         resultLabel.text = String(correctAnswer)
+        
+        //ボタンの角を丸くする
+        backToredultButton.layer.cornerRadius = 10
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,7 +34,7 @@ class ResultViewController: UIViewController {
     }
 
     @IBAction func back() {
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

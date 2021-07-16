@@ -60,9 +60,9 @@ class GameViewController: UIViewController {
         //引数のsender.tagに格納されているTagの値を使って処理を区別する
         
         let tmpArray = quizArray[0] as! [Any]
-        
+        print(tmpArray[5], sender.tag)
         if tmpArray[5] as! Int == sender.tag {
-            
+            print("correct")
             //生回数を増やす
             correctAnser = correctAnser + 1
         }

@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="bbc-N5-7HF">
             <objects>
-                <viewController id="rPW-kE-GJh" sceneMemberID="viewController">
+                <viewController id="rPW-kE-GJh" customClass="ViewController" customModule="Trans_title" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eFk-b6-i9h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                                 <color key="textColor" red="1" green="0.14261104939216662" blue="0.078226090856513775" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="〜説明文〜　　　　　　　　　　　　　　　　　　　　　　　「ゲームを始める」を押してジャンルを選択したら、　いよいよゲームスタート！　　　　　　　　　　　　　　　高得点を目指してがんばれ！！" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-Sf-0F4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="〜説明文〜　　　　　　　　　　　　　　　　　　　　　　　「ゲームを始める」を押して問題のジャンルを選択したら、　いよいよゲームスタート！　　　　　　　　　　　　　　　高得点を目指してがんばれ！！" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-Sf-0F4">
                                 <rect key="frame" x="20" y="424" width="374" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,6 +58,9 @@
                         <viewLayoutGuide key="safeArea" id="Iua-sy-6tI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="ITh-JU-lHv" id="eSy-ou-X6x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FW8-jA-ePq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,6 +110,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="japaneseToEnglishAnimeButton" destination="UDn-z6-Pvq" id="30U-rm-bgf"/>
+                        <outlet property="japaneseToEnglishMovieButton" destination="tsI-e7-9Xs" id="Alt-Ls-1ur"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toGameViewController" modalPresentationStyle="fullScreen" id="MLG-rZ-wfP"/>
                     </connections>
                 </viewController>
@@ -150,7 +155,7 @@
                                 <rect key="frame" x="87" y="647" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNK-fD-Fqu">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNK-fD-Fqu">
                                 <rect key="frame" x="20" y="554" width="374" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
@@ -175,11 +180,11 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="~問題文〜" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="46E-YT-0m6">
-                                <rect key="frame" x="87" y="119" width="240" height="119"/>
+                                <rect key="frame" x="20" y="82" width="374" height="156"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -212,9 +217,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="結果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iM-no-0k6">
-                                <rect key="frame" x="170" y="260" width="88" height="103"/>
+                                <rect key="frame" x="146" y="260" width="135" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="35"/>
                                 <color key="textColor" red="1" green="0.1426110494" blue="0.07822609086" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -232,9 +237,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="得点" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3f-xF-88w">
-                                <rect key="frame" x="170" y="200" width="88" height="39"/>
+                                <rect key="frame" x="146" y="182" width="135" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -243,6 +248,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="backToredultButton" destination="WER-nb-Rb0" id="Emp-nb-pE1"/>
                         <outlet property="resultLabel" destination="9iM-no-0k6" id="Eoj-82-Vf2"/>
                     </connections>
                 </viewController>

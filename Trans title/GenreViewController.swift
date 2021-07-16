@@ -8,11 +8,17 @@
 import UIKit
 
 class GenreViewController: UIViewController {
+    
+    @IBOutlet var japaneseToEnglishAnimeButton: UIButton!
+    @IBOutlet var japaneseToEnglishMovieButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        //ボタンの角を丸くする
+        japaneseToEnglishMovieButton.layer.cornerRadius = 10
+        japaneseToEnglishAnimeButton.layer.cornerRadius = 10
     }
     
 
