@@ -180,13 +180,18 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="~問題文〜" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="46E-YT-0m6">
-                                <rect key="frame" x="20" y="82" width="374" height="156"/>
+                                <rect key="frame" x="20" y="86" width="374" height="152"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4YI-l9-O6e">
+                                <rect key="frame" x="20" y="44" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90938848257064819" green="0.41989707946777344" blue="0.88292747735977173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -197,6 +202,7 @@
                         <outlet property="choiceButton3" destination="vzV-BT-Bes" id="bdc-Vn-3fq"/>
                         <outlet property="choiceButton4" destination="qNK-fD-Fqu" id="gOK-QQ-lFp"/>
                         <outlet property="quizTextView" destination="46E-YT-0m6" id="7bE-pf-3MC"/>
+                        <outlet property="timeLimitBar" destination="4YI-l9-O6e" id="ZTA-dE-XSB"/>
                         <segue destination="MUh-pf-3r5" kind="presentation" identifier="toResultView" id="tjd-Dg-f37"/>
                     </connections>
                 </viewController>

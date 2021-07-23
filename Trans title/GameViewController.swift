@@ -28,6 +28,12 @@ class GameViewController: UIViewController {
     @IBOutlet var choiceButton3: UIButton!
     @IBOutlet var choiceButton4: UIButton!
     
+    //タイムリミットを表示するバー
+    @IBOutlet var timeLimitBar: UIView!
+    var timeLimitBarWidth: CGFloat = 0
+    //回答したかどうかを判定
+    var answered: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,7 +62,16 @@ class GameViewController: UIViewController {
         choiceButton4.layer.cornerRadius = 10
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        // 縮まる前のバーの横幅を保存しておく
+        timeLimitBarWidth = timeLimitBar.frame.width
+        //　カウントダウン開始！
+        startTimer()
+    }
+        
     @IBAction func choiceAnswer(sender: UIButton) {
+        //回答したことを伝える
+        self.answered = true
         //引数のsender.tagに格納されているTagの値を使って処理を区別する
         
         let tmpArray = quizArray[0] as! [Any]
@@ -72,9 +87,13 @@ class GameViewController: UIViewController {
         
         //といた問題数の合計があらかじめ設定していた問題数に達したら結果画面へ
         if quizArray.count == 0 {
+            //タイムリミットバーのアニメーションを中止
+            self.timeLimitBar.layer.removeAllAnimations()
             performSegueToResult()
         } else {
             choiceQuiz()
+            //タイマースタート！
+            startTimer()
         }
     }
     
@@ -91,6 +110,47 @@ class GameViewController: UIViewController {
         choiceButton3.setTitle(tmpArray[3] as? String, for: .normal)
         choiceButton4.setTitle(tmpArray[4] as? String, for: .normal)
         
+    }
+    
+    //　制限時間が来た時に不正解にして次の問題に進む
+    func skipAnswer() {
+        //解いた問題をquizArrayから取り除く
+        quizArray.remove(at: 0)
+        
+        //解いた問題数の合計があらかじめ設定数に達したら結果画面へ
+        if quizArray.count == 0 {
+            //アニメーションをキャンセル
+            self.timeLimitBar.layer.removeAllAnimations()
+            performSegueToResult()
+        } else {
+            choiceQuiz()
+            startTimer()
+        }
+    }
+    
+    //カウントダウンを開始させる
+    func startTimer() {
+        //タイムリミットバーで表示されているアニメーションを中止
+        self.timeLimitBar.layer.removeAllAnimations()
+        //タイムリミットバーの横幅を一番最初の幅にする
+        timeLimitBar.frame.size.width = timeLimitBarWidth
+        //アニメーション
+        UIView.animate(
+            //何秒間で実行されるのか
+            withDuration: 5,
+            delay: 0,
+            options: .curveLinear,
+            animations: {
+                //タイムリミットバーの横幅を0にする
+                self.timeLimitBar.frame.size.width = 0
+            }, completion: { _ in
+                //5秒たって回答していなかったらskipAnswerを実行
+                if !self.answered {
+                    self.skipAnswer()
+                    self.answered = false
+                }
+            }
+        )
     }
     
     func performSegueToResult() {
