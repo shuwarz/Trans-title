@@ -137,7 +137,7 @@ class GameViewController: UIViewController {
         //アニメーション
         UIView.animate(
             //何秒間で実行されるのか
-            withDuration: 5,
+            withDuration: 10,
             delay: 0,
             options: .curveLinear,
             animations: {
