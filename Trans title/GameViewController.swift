@@ -22,6 +22,11 @@ class GameViewController: UIViewController {
     //クイズを表示するTextView
     @IBOutlet var quizTextView: UITextView!
     
+    //正解・不正解を表示するラベル
+    @IBOutlet var resultLabel: UILabel!
+    //resultLabelの元のy座標を保存しておく変数
+    var resultLabelY: CGFloat = 0
+    
     //選択肢のボタン
     @IBOutlet var choiceButton1: UIButton!
     @IBOutlet var choiceButton2: UIButton!
@@ -60,11 +65,19 @@ class GameViewController: UIViewController {
         choiceButton2.layer.cornerRadius = 10
         choiceButton3.layer.cornerRadius = 10
         choiceButton4.layer.cornerRadius = 10
+        
+        //resultLabelを非表示する
+        resultLabel.alpha = 0
     }
     
+    //UIが表示された時
     override func viewDidAppear(_ animated: Bool) {
         // 縮まる前のバーの横幅を保存しておく
         timeLimitBarWidth = timeLimitBar.frame.width
+        
+        //resultLabelのy座標を保存
+        resultLabelY = resultLabel.frame.origin.y
+        
         //　カウントダウン開始！
         startTimer()
     }
@@ -151,6 +164,21 @@ class GameViewController: UIViewController {
                 }
             }
         )
+    }
+    
+    func animateResultLabel() {
+        UIView.animate(
+            withDuration: 0.25,
+            delay: 0,
+            options: .curveLinear,
+            animations: {
+                self.resultLabel.frame.origin.y -= 20
+                self.resultLabel.alpha = 1
+            },
+            completion: { _ in
+                self.resultLabel.alpha = 0
+                self.resultLabel.frame.origin.y = self.resultLabelY
+            })
     }
     
     func performSegueToResult() {
