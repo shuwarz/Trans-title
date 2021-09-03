@@ -93,6 +93,17 @@ class GameViewController: UIViewController {
             print("correct")
             //生回数を増やす
             correctAnser = correctAnser + 1
+            
+            //回答した時に結果を表示させる
+            //正解の時
+            self.resultLabel.text = "正解"
+            self.resultLabel.textColor = UIColor.red
+            animateResultLabel()
+        } else {
+            //　不正解の時
+            self.resultLabel.text = "不正解"
+            self.resultLabel.textColor = UIColor.blue
+            animateResultLabel()
         }
         
         //といた問題をquizeArrayから取り除く
@@ -168,7 +179,7 @@ class GameViewController: UIViewController {
     
     func animateResultLabel() {
         UIView.animate(
-            withDuration: 0.25,
+            withDuration: 0.75,
             delay: 0,
             options: .curveLinear,
             animations: {
