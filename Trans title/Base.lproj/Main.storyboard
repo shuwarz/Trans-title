@@ -39,14 +39,6 @@
                                 <color key="textColor" red="1" green="0.14261104939216662" blue="0.078226090856513775" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="〜説明文〜　　　　　　　　　　　　　　　　　　　　　　　「ゲームを始める」を押して問題のジャンルを選択したら、　いよいよゲームスタート！　　　　　　　　　　　　　　　高得点を目指してがんばれ！！" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-Sf-0F4">
-                                <rect key="frame" x="20" y="424" width="374" height="131"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijv-7w-n73">
                                 <rect key="frame" x="223" y="142" width="90" height="151"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -54,17 +46,108 @@
                                 <color key="textColor" red="0.058557826569999999" green="0.055977243840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otw-ZD-kSl">
+                                <rect key="frame" x="236" y="814" width="106" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="お問い合わせ">
+                                    <color key="titleColor" red="0.0" green="0.0078757824380000004" blue="0.0079334368930000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="v9h-xo-eH6" kind="presentation" id="CtA-aa-rnB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPi-fc-mb9">
+                                <rect key="frame" x="53" y="811" width="96" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="利用規約">
+                                    <color key="titleColor" red="0.0" green="0.0078757824380000004" blue="0.0079334368930000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ozK-l3-FTE" kind="presentation" id="v1P-3C-0p4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXj-D7-8fk">
+                                <rect key="frame" x="87" y="460" width="240" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="35"/>
+                                <state key="normal" title="《遊び方》">
+                                    <color key="titleColor" red="0.055979110300540924" green="0.16690632700920105" blue="0.96585315465927124" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Qo0-xk-SIi" kind="presentation" id="x8p-f5-BOS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Iua-sy-6tI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="startButton" destination="ITh-JU-lHv" id="eSy-ou-X6x"/>
+                        <outlet property="supportBotton" destination="otw-ZD-kSl" id="ATc-GK-Pbg"/>
+                        <outlet property="termOfServiceBotton" destination="zPi-fc-mb9" id="DIY-Yw-QUH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FW8-jA-ePq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-828.98550724637687" y="71.651785714285708"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rtg-28-Nee">
+            <objects>
+                <viewController id="Qo0-xk-SIi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9fH-Bc-tk6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyb-A8-Q6W">
+                                <rect key="frame" x="52" y="60" width="311" height="333"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">　　　　　　　　　　　　　　　　　　　　　＝＝＝＝説明文＝＝＝＝　　　　　　「ゲームを始める」を押して　　　　　　問題のジャンルを選択したら、　　　　　　いよいよゲームスタート！　　　　　　　　　　制限時間は各問題につき10秒！　　　　　　　　　　　　　　　高得点を目指してがんばれ！！</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8J7-K5-Hh6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCo-jg-jEN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2552.1739130434785" y="71.651785714285708"/>
+        </scene>
+        <!--Terms Of Service View Controller-->
+        <scene sceneID="lja-Ic-cnV">
+            <objects>
+                <viewController id="ozK-l3-FTE" customClass="TermsOfServiceViewController" customModule="Trans_title" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kmb-0L-aIa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="T9v-jM-8WH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ebz-58-Vsd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1738" y="72"/>
+        </scene>
+        <!--Support View Controller-->
+        <scene sceneID="jYw-rC-Hsu">
+            <objects>
+                <viewController id="v9h-xo-eH6" customClass="SupportViewController" customModule="Trans_title" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zv2-VM-c8e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Y0x-B7-pgm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="06R-4k-3hh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1739" y="824"/>
         </scene>
         <!--Genre View Controller-->
         <scene sceneID="50I-KF-VU1">
@@ -249,6 +332,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JG-ZV-idu">
+                                <rect key="frame" x="140" y="402" width="134" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="結果を共有する">
+                                    <color key="titleColor" red="0.0" green="0.0078757824380000004" blue="0.0079334368930000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="share" destination="MUh-pf-3r5" eventType="touchUpInside" id="YWV-Ed-jET"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lqj-kk-JaL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

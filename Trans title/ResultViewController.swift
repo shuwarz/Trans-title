@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Accounts
 
 
 class ResultViewController: UIViewController {
@@ -45,5 +46,16 @@ class ResultViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func share() {
+        let shareText = "Trans Titleで\(correctAnswer)問正解しました！"
+        let activityItems = [shareText]
+        
+        let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        
+        self.present(activityVC, animated: true, completion: nil)
+        
+    }
+    
 
 }
