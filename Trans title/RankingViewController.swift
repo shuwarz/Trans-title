@@ -14,8 +14,9 @@ class RankingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		let rankingArray = UserDefaults.standard.object(forKey: "ranking") as! [Int]
+		var rankingArray = UserDefaults.standard.object(forKey: "ranking") as! [Int]
 		
+		rankingArray.sort(by: >)
 			if rankingArray.indices.contains(0) {
 				firstLabel.text = "1位: \(String(rankingArray[0]))"
 			} else {
