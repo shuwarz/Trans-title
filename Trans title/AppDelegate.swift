@@ -12,8 +12,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-		let appDomain = Bundle.main.bundleIdentifier
-		UserDefaults.standard.removePersistentDomain(forName: appDomain!)
         return true
     }
 
