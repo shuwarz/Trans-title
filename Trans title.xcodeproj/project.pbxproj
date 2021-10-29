@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71260612272BDF2200C46B11 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71260611272BDF2200C46B11 /* RankingViewController.swift */; };
 		D81A690C267CA87D00408720 /* QuizList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A690B267CA87D00408720 /* QuizList.swift */; };
 		D828AEA5263C13180086FF88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828AEA4263C13180086FF88 /* AppDelegate.swift */; };
 		D828AEA7263C13180086FF88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828AEA6263C13180086FF88 /* SceneDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71260611272BDF2200C46B11 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		D81A690B267CA87D00408720 /* QuizList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizList.swift; sourceTree = "<group>"; };
 		D828AEA1263C13180086FF88 /* Trans title.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trans title.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D828AEA4263C13180086FF88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				D828AEAD263C13190086FF88 /* Assets.xcassets */,
 				D828AEAF263C13190086FF88 /* LaunchScreen.storyboard */,
 				D828AEB2263C13190086FF88 /* Info.plist */,
+				71260611272BDF2200C46B11 /* RankingViewController.swift */,
 			);
 			path = "Trans title";
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				D8B6919F2660FD6300F8244D /* ResultViewController.swift in Sources */,
 				D8B6919C2660FD2800F8244D /* GameViewController.swift in Sources */,
 				D81A690C267CA87D00408720 /* QuizList.swift in Sources */,
+				71260612272BDF2200C46B11 /* RankingViewController.swift in Sources */,
 				D8B706222722BC5400E1EFCA /* SupportViewController.swift in Sources */,
 				D828AEA9263C13180086FF88 /* ViewController.swift in Sources */,
 				D828AEA5263C13180086FF88 /* AppDelegate.swift in Sources */,

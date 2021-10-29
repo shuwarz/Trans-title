@@ -27,6 +27,19 @@ class ResultViewController: UIViewController {
         
         //ボタンの角を丸くする
         backToredultButton.layer.cornerRadius = 10
+		
+		let rankingArray = UserDefaults.standard.array(forKey: "ranking")
+		
+		if var rankingArray = rankingArray {
+			rankingArray.append(correctAnswer)
+			UserDefaults.standard.set(rankingArray, forKey: "ranking")
+		} else {
+			var array: [Int] = []
+			array.append(correctAnswer)
+			UserDefaults.standard.set(array, forKey: "ranking")
+		}
+		let array = UserDefaults.standard.object(forKey: "ranking")
+		print(String(describing: array))
     }
     
     override func didReceiveMemoryWarning() {
